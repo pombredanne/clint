@@ -1,6 +1,35 @@
 History
 -------
 
+0.3.0
++++++
+
+* Python 3 support!
+
+0.2.4
++++++
+
+* New eng module
+* Win32 Bugfix
+
+
+0.2.3
++++++
+
+* Only init colors if they are used (iPython compatability)
+* New progress module
+* Various bugfixes
+
+
+0.2.2
++++++
+
+* Auto Color Disabling
+* Progress Namespace Change
+* New Progress Bars
+* textui.puts newline fix
+
+
 0.2.1 (2011-03-24)
 ++++++++++++++++++
 

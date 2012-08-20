@@ -4,7 +4,10 @@
 import os
 import sys
 
-from distutils.core import setup
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
 
 import clint
 
@@ -18,7 +21,7 @@ if sys.argv[-1] == "publish":
     publish()
     sys.exit()
 
-required = []
+required = ['args']
 
 setup(
     name='clint',
@@ -29,6 +32,10 @@ setup(
     author='Kenneth Reitz',
     author_email='me@kennethreitz.com',
     url='https://github.com/kennethreitz/clint',
+    data_files=[
+        'README.rst',
+        'HISTORY.rst',
+    ],
     packages= [
         'clint',
         'clint.textui',
@@ -38,14 +45,17 @@ setup(
     license='ISC',
     classifiers=(
 #       'Development Status :: 5 - Production/Stable',
+        'Environment :: Console',
         'Intended Audience :: Developers',
         'Natural Language :: English',
         'License :: OSI Approved :: ISC License (ISCL)',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.5',
+        'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        # 'Programming Language :: Python :: 3.0',
-        # 'Programming Language :: Python :: 3.1',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.1',
+        'Programming Language :: Python :: 3.2',
+        'Topic :: Terminals :: Terminal Emulators/X Terminals',
     ),
 )
