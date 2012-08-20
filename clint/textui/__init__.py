@@ -10,4 +10,6 @@ This module provides the text output helper system.
 
 
 from . import colored
-from core import *
+from . import progress
+
+from .core import *
